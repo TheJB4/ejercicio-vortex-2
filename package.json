@@ -1,0 +1,15 @@
+{
+  "name": "ejercicio-vortex-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest tests"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

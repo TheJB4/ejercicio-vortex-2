@@ -48,22 +48,31 @@ function laSumaDeTodosLosNumeros(array){
 
 function elQueMasSeRepite(numeros){
     let myObject = {}
+    let manejador = numeros
 
-    for (let i = 0; i < numeros.length; i++) {
-        const element = numeros[i];
+    let contador = numeros.length 
+    let numeroQueAparecio = 1
 
-        myObject[element] = {
-            value : 1
+    while(contador >= 1){
+        myObject[numeros[0]]={value:1}
+
+        numeros.shift()
+        for (let i = 0; i < numeros.length; i++) {
+            const element = numeros[i];
+           if(myObject.hasOwnProperty(element)){
+            numeroQueAparecio++
+            
         }
-        
+           break   
+        }
+
+        contador--
     }
 
     return myObject
 }
 
 
-
-//elQueMasSeRepite([5, 8, 8, 9, 0, 8, 3, 2])
 
 module.exports = {
     media,

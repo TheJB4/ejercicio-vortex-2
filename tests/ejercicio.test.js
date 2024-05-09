@@ -1,4 +1,5 @@
 const {media,mediana,moda,rango,isPar} = require('../ejercicio')
+const {repetidos} = require('../masRepetido.js')
 
 
 test('Dada una lista vacia devolver NaN', () => {
@@ -44,15 +45,15 @@ test('Dada una lista de numeros con longitud "impar" devolver la mediana', () =>
 
 test('Dada una lista de numeros devuelve solamente el numero que mas se repite', () => {
   let input = [5, 8, 8, 9, 0, 8, 3, 2]
-  expect(moda(input)).toBe(8);
+  expect(repetidos(input)).toBe(8);
 });
 
 test('Dada una lista de numeros devuelve los 2 o mas numeros de moda', () => {
   let input = [3, 9, 3, 10, 9, 0, 3, 9, 5, 10, 6, 10]
-  expect(moda(input)).toBe([3,9,10]);
+  expect(repetidos(input)).toStrictEqual([3,9,10]);
 });
 
 test('Dada una lista de numeros que no tienen moda devuelve undefined', () => {
-  let input = [3, 9, 3, 10, 9, 0, 3, 9, 5, 10, 6, 10]
-  expect(moda(input)).toBe(undefined);
+  let input = [6, 8, 6, 3, 8, 3]
+  expect(repetidos(input)).toBe(undefined);
 });
